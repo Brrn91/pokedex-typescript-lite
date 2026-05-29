@@ -188,7 +188,7 @@ Métodos: `adicionar`, `listar`, `remover`.
 
 ## Kanban
 
-Link do Kanban: COLE_O_LINK_AQUI
+Link do Kanban: https://trello.com/b/DXvrg5qX/pokédex-typescript-lite
 
 ## Melhorias futuras
 
