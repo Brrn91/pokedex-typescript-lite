@@ -210,10 +210,6 @@ Métodos: `adicionar`, `listar`, `remover`.
 - `feat/pokedex` — desenvolvimento das funcionalidades
 - `docs/readme` — documentação
 
-## Kanban
-
-Link do Kanban: COLE_O_LINK_AQUI
-
 ## Melhorias futuras
 
 - Menu interativo no terminal
