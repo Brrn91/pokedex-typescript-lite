@@ -36,4 +36,12 @@ export class TerminalController {
     console.log(formatarTitulo(`Pokémon do tipo "${tipo}"`));
     resultado.forEach((pokemon) => console.log(formatarPokemon(pokemon)));
   }
+
+  async carregarCatalogo(): Promise<void> {
+    await this.catalogo.carregarDoArquivo();
+  }
+
+  async salvarCatalogo(): Promise<void> {
+    await this.catalogo.salvarNoArquivo();
+  }
 }
