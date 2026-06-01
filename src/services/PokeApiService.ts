@@ -15,12 +15,21 @@ export async function buscarPokemon(
 
     const dados = (await resposta.json()) as PokemonApiResponse;
 
+    const hp = dados.stats.find((s) => s.stat.name === "hp")?.base_stat ?? 0;
+    const ataque =
+      dados.stats.find((s) => s.stat.name === "attack")?.base_stat ?? 0;
+    const defesa =
+      dados.stats.find((s) => s.stat.name === "defense")?.base_stat ?? 0;
+
     const pokemonResumo: PokemonResumo = {
       id: dados.id,
       nome: dados.name,
       tipos: dados.types.map((item) => item.type.name),
       altura: dados.height,
       peso: dados.weight,
+      hp,
+      ataque,
+      defesa,
     };
 
     return pokemonResumo;
