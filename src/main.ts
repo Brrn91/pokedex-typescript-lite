@@ -12,3 +12,7 @@ await controller.buscarEAdicionar("pokemon-inexistente");
 controller.listarCatalogo();
 controller.removerDoCatalogo(25);
 controller.listarCatalogo();
+
+await controller.buscarEAdicionar("charizard");
+controller.filtrarPorTipo("fire");
+controller.filtrarPorTipo("water");

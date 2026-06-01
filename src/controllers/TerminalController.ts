@@ -1,6 +1,6 @@
 import { CatalogoPokemon } from "../services/BoxService.js";
 import { buscarPokemon } from "../services/PokeApiService.js";
-import { formatarTitulo } from "../utils/textFormatters.js";
+import { formatarTitulo, formatarPokemon } from "../utils/textFormatters.js";
 
 export class TerminalController {
   private catalogo: CatalogoPokemon;
@@ -23,5 +23,17 @@ export class TerminalController {
 
   removerDoCatalogo(id: number): void {
     this.catalogo.remover(id);
+  }
+
+  filtrarPorTipo(tipo: string): void {
+    const resultado = this.catalogo.filtrarPorTipo(tipo);
+
+    if (resultado.length === 0) {
+      console.log(`[AVISO] Nenhum Pokémon do tipo "${tipo}" encontrado.`);
+      return;
+    }
+
+    console.log(formatarTitulo(`Pokémon do tipo "${tipo}"`));
+    resultado.forEach((pokemon) => console.log(formatarPokemon(pokemon)));
   }
 }

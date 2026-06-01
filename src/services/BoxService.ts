@@ -38,4 +38,10 @@ export class CatalogoPokemon {
     this.pokemons = this.pokemons.filter((pokemon) => pokemon.id !== id);
     console.log("[OK] Pokémon removido do catálogo.");
   }
+
+  filtrarPorTipo(tipo: string): PokemonResumo[] {
+    return this.pokemons.filter((pokemon) =>
+      pokemon.tipos.some((t) => t.toLowerCase() === tipo.toLowerCase()),
+    );
+  }
 }
