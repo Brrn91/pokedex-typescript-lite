@@ -89,6 +89,22 @@ src/
 
 ## Exemplos de execução
 
+### Menu interativo
+
+```
+=== Pokédex TypeScript Lite ===
+1. Buscar Pokémon
+2. Listar catálogo
+3. Filtrar por tipo
+4. Remover Pokémon
+5. Sair
+
+Escolha uma opção: 1
+Digite o nome ou ID do Pokémon: bulbasaur
+[OK] bulbasaur adicionado ao catálogo.
+[OK] Catálogo salvo no arquivo.
+```
+
 ### Busca válida
 
 Entrada testada:
@@ -151,8 +167,8 @@ Saída obtida:
 
 ```
 === Catálogo de Pokémon ===
-#25 - pikachu | Tipos: electric | Altura: 4 | Peso: 60
-#4 - charmander | Tipos: fire | Altura: 6 | Peso: 85
+#25 - pikachu | Tipos: electric | Altura: 4 | Peso: 60 | HP: 35 | Ataque: 55 | Defesa: 40
+#4 - charmander | Tipos: fire | Altura: 6 | Peso: 85 | HP: 39 | Ataque: 52 | Defesa: 43
 ```
 
 ## Conceitos aplicados
@@ -181,7 +197,7 @@ O bloco `try/catch` captura erros de rede e respostas 404, retornando `null` sem
 ### Classe CatalogoPokemon
 
 Atributo `private pokemons` encapsula a lista interna.
-Métodos: `adicionar`, `listar`, `remover`.
+Métodos: `adicionar`, `listar`, `remover`, `filtrarPorTipo`, `carregarDoArquivo`, `salvarNoArquivo`.
 
 ## Branches utilizadas
 
@@ -200,23 +216,3 @@ Link do Kanban: https://trello.com/b/DXvrg5qX/pokédex-typescript-lite
 - API REST com Express
 - Filtros por faixa de HP ou Ataque
 - Exportar catálogo em CSV
-
-### Classe CatalogoPokemon
-
-Atributo `private pokemons` encapsula a lista interna.
-Métodos: `adicionar`, `listar`, `remover`.
-
-## Branches utilizadas
-
-- `main` — código estável
-- `develop` — integração
-- `feat/pokedex` — desenvolvimento das funcionalidades
-- `docs/readme` — documentação
-
-## Melhorias futuras
-
-- Menu interativo no terminal
-- Persistência em arquivo JSON
-- Filtros por tipo de Pokémon
-- Testes unitários com Jest
-- API REST com Express
