@@ -78,10 +78,14 @@ src/
 - Buscar Pokémon por nome ou ID
 - Tratar erro de Pokémon inexistente
 - Transformar resposta da API em objeto simplificado
+- Exibir HP, Ataque e Defesa de cada Pokémon
 - Adicionar Pokémon ao catálogo local
 - Impedir Pokémon duplicado pelo ID
 - Listar catálogo formatado
+- Filtrar Pokémon por tipo
 - Remover Pokémon por ID
+- Persistir catálogo em arquivo JSON entre execuções
+- Menu interativo no terminal
 
 ## Exemplos de execução
 
@@ -192,11 +196,10 @@ Link do Kanban: https://trello.com/b/DXvrg5qX/pokédex-typescript-lite
 
 ## Melhorias futuras
 
-- Menu interativo no terminal
-- Persistência em arquivo JSON
-- Filtros por tipo de Pokémon
 - Testes unitários com Jest
-- API REST com Expresslista de tipos em texto
+- API REST com Express
+- Filtros por faixa de HP ou Ataque
+- Exportar catálogo em CSV
 
 ### Classe CatalogoPokemon
 
