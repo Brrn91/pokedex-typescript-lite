@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucas Bruno",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
